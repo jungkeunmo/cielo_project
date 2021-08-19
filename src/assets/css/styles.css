@@ -1,4 +1,135 @@
 @import "./reset.css";
 @import "../css/layouts/main.css";
 @import "../css/screens/home.css";
+@import "../css/screens/like.css";
+@import "../css/screens/image.css";
+
+@media screen and (min-width: 450px) {
+    .mobile__screen {
+        display: none;
+    }
+
+    .pc__screen {
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pc__screen p {
+        text-shadow: 3px 3px 3px #222;
+    }
+}
+
+@media screen and (max-width: 451px) {
+    .pc__screen {
+        display: none;
+    }
+
+    .mobile__screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header {
+        width: 100%;
+        height: 53px;
+        background-color: #fff;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__text {
+        font-size: 30px;
+        
+    }
+
+    .header__icon {
+        width: 100%;
+        height: 30px;
+        padding: 2px;
+        margin-left: 180px;
+    }
+
+    .header__icon i {
+        font-size: 28px;
+    }
+
+    .top {
+        width: 100%;
+        height: 47px;
+        background-color: #fff;
+        position:sticky;
+
+        top:0px;
+        box-shadow:  0.7px 1px rgb(214, 213, 213);
+
+        display: flex;
+        flex-direction: row;
+
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .top__col1,
+    .top__col2,
+    .top__col3,
+    .top__col4,
+    .top__col5,
+    .top__col6{
+        width: 16.6666666667%;
+        height: 47px;
+        padding: 18px 15px 0px;
+        font-size: 14px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .nav {
+        position: fixed;
+        bottom: 0px;
+        background-color: #fff;
+
+        width: 100%;
+        height: 53px;
+        
+        box-shadow: 0.5px 0.5px 3px rgb(214, 213, 213);
+
+        display: flex;
+        flex-direction: row;
+
+        padding: 0px 15px;
+    }
+
+    .nav__col1 ,
+    .nav__col2 ,
+    .nav__col3 , 
+    .nav__col4  {
+        padding: 12px 25px;
+        
+    }
+
+    .nav__col1 i,
+    .nav__col2 i,
+    .nav__col3 i, 
+    .nav__col4 i {
+        font-size: 30px;
+        color: rgb(167, 163, 163);
+    }
+
+    
+}
 

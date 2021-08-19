@@ -1,0 +1,13 @@
+extends ../layouts/serve.pug
+
+block content
+    div.mainBox 
+        h1.logo cielo 
+        form(action="#" method="post")
+            div.loginLabel
+                label ID 
+                input(type="text" name="input_id")
+            div.loginLabel
+                label PASSWORD 
+                input(type="password" name="input_pass")
+            input(type="submit" value="LOGIN")  

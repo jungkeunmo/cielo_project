@@ -1,0 +1,80 @@
+@import "../css/screens/search.css";
+@import "../css/reset.css";
+
+.searchheader {
+    width: 100%;
+    height: 53px;
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+
+    top:0px;
+    box-shadow: 0.7px 1px rgb(214, 213, 213);
+
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+    padding: 10px;
+}
+
+.searchheader__col1 {
+    width: 85%;
+    height: 100%;
+
+    background-color: rgb(236, 236, 236);
+}
+
+.searchheader__col1 i {
+    font-size: 20px;
+    padding: 5px;
+    
+    color: #999;
+}
+
+.searchheader__col1 i input {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(236, 236, 236);
+}
+
+button {
+    margin-left: 10px;
+    size: 30px;
+    background-color: paleturquoise;
+    border-radius: 8px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0px;
+    background-color: #fff;
+
+    width: 100%;
+    height: 53px;
+    
+    box-shadow: 0.5px 0.5px 3px rgb(214, 213, 213);
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0px 15px;
+}
+
+.nav__col1 ,
+.nav__col2 ,
+.nav__col3 , 
+.nav__col4  {
+    padding: 12px 25px;
+    
+}
+
+.nav__col1 i,
+.nav__col2 i,
+.nav__col3 i, 
+.nav__col4 i {
+    font-size: 30px;
+    color: rgb(167, 163, 163);
+}

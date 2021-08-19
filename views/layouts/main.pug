@@ -6,5 +6,53 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title cielo
         link(rel="stylesheet", href="/css/styles.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")
+        script(src="/js/script.js")
     body
-        block content
+        section.pc__screen 
+        section.mobile__screen
+            header.header
+                a(href="/") 
+                    .header__text acielo.   
+                .header__icon
+                    a(href="/search") 
+                        i.fas.fa-search
+
+            header.top 
+                div.top__col1 메인
+                div.top__col2 웹툰
+                div.top__col3 애니
+                div.top__col4 실사
+                div.top__col5 배경
+                div.top__col6 동화
+
+            main.main 
+                block content
+
+            nav.nav
+                div 
+                    .nav__col1 
+                        a(href="/")
+                            i.fas.fa-home
+                div 
+                    .nav__col2
+                        a(href="/image")
+                            i.fas.fa-th-large
+                div 
+                    .nav__col3
+                        a(href="/like") 
+                            i.fas.fa-heart
+                                
+                div 
+                    .nav__col4
+                        a(href="/login")  
+                            i.fas.fa-user  
