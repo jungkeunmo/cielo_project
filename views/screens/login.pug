@@ -2,12 +2,10 @@ extends ../layouts/serve.pug
 
 block content
     div.mainBox 
-        h1.logo cielo 
+        h1.logo CIELO
         form(action="#" method="post")
             div.loginLabel
-                label ID 
-                input(type="text" name="input_id")
+                input(type="text" name="input_id" placeholder="아이디")
             div.loginLabel
-                label PASSWORD 
-                input(type="password" name="input_pass")
+                input(type="password" name="input_pass" placeholder="비밀번호")
             input(type="submit" value="LOGIN")  

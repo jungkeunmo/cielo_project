@@ -1,7 +1,7 @@
 @import "../css/reset.css";
 @import "../css/screens/login.css";
 
-.nav1 {
+.nav {
     position: fixed;
     bottom: 0px;
     background-color: #fff;
@@ -17,18 +17,18 @@
     padding: 0px 15px;
 }
 
-.nav1__col1 ,
-.nav1__col2 ,
-.nav1__col3 , 
-.nav1__col4  {
+.nav__col1 ,
+.nav__col2 ,
+.nav__col3 , 
+.nav__col4  {
     padding: 12px 25px;
     
 }
 
-.nav1__col1 i,
-.nav1__col2 i,
-.nav1__col3 i, 
-.nav1__col4 i {
+.nav__col1 i,
+.nav__col2 i,
+.nav__col3 i, 
+.nav__col4 i {
     font-size: 30px;
     color: rgb(167, 163, 163);
 }
