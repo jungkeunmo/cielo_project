@@ -144,6 +144,10 @@ input {
   border: none;
 }
 
+button {
+  border: none;
+}
+
 html {
   font-family: 'Nanum Myeongjo', serif;
 }

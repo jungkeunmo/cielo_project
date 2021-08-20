@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import expessSession from "express-session";
 import globalRouter from "./routers/globalRouter";
+import connect from "../db";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -22,9 +23,10 @@ app.use(
         saveUninitialized: true,
     })
 );
+connect();
 
 app.use("/", globalRouter);
 
 app.listen(PORT, () => {
-    console.log(`✅http://localhost:${PORT} , CIELO SERVER START✅`);
+    console.log(`🥕http://localhost:${PORT} , CIELO SERVER START🥕`);
 });

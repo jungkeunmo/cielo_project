@@ -3,9 +3,11 @@ extends ../layouts/serve.pug
 block content
     div.mainBox 
         h1.logo CIELO
-        form(action="#" method="post")
+        form(action="/signin" method="post")
             div.loginLabel
                 input(type="text" name="input_id" placeholder="아이디")
             div.loginLabel
                 input(type="password" name="input_pass" placeholder="비밀번호")
             input(type="submit" value="LOGIN")  
+            a(href="/") 
+                .signup 회원가입
