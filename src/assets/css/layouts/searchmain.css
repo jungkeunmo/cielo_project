@@ -40,13 +40,6 @@
     background-color: rgb(236, 236, 236);
 }
 
-button {
-    margin-left: 10px;
-    size: 30px;
-    background-color: paleturquoise;
-    border-radius: 8px;
-}
-
 .nav {
     position: fixed;
     bottom: 0px;

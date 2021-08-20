@@ -2,7 +2,6 @@
 @import "../screens/home.css";
 @import "../screens/like.css";
 @import "../screens/image.css";
-@import "../screens/profile.css";
 
 @media screen and (min-width: 450px) {
     .mobile__screen {

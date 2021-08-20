@@ -6,5 +6,40 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title cielo
         link(rel="stylesheet", href="/css/layouts/profilemain.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")
     body 
-        block content
+        section.pc__screen 
+        section.mobile__screen
+            header.header
+                a(href="/home") 
+                    .header__text 프로필 
+            main.main 
+                block content
+
+            nav.nav
+                div 
+                    .nav__col1 
+                        a(href="/home")
+                            i.fas.fa-home
+                div 
+                    .nav__col2
+                        a(href="/image")
+                            i.fas.fa-th-large
+                div 
+                    .nav__col3
+                        a(href="/like") 
+                            i.fas.fa-heart
+                                
+                div 
+                    .nav__col4
+                        a(href="/profile")  
+                            i.fas.fa-user  

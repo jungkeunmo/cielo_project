@@ -1,5 +1,5 @@
 @import "../reset.css";
-@import "../screens/profile.css";
+@import "../screens/like.css";
 
 @media screen and (min-width: 450px) {
     .mobile__screen {
@@ -49,6 +49,46 @@
 
     .header__text {
         font-size: 30px;
+        
+    }
+
+    .header__icon {
+        width: 100%;
+        height: 30px;
+        padding: 2px;
+        margin-left: 180px;
+    }
+
+    .header__icon i {
+        font-size: 28px;
+    }
+
+    .top {
+        width: 100%;
+        height: 47px;
+        background-color: #fff;
+        position:sticky;
+
+        top:0px;
+        box-shadow:  0.7px 1px rgb(214, 213, 213);
+
+        display: flex;
+        flex-direction: row;
+
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .top__col1,
+    .top__col2,
+    .top__col3,
+    .top__col4,
+    .top__col5,
+    .top__col6{
+        width: 16.6666666667%;
+        height: 47px;
+        padding: 18px 15px 0px;
+        font-size: 14px;
     }
 
     .main {
@@ -86,6 +126,4 @@
         font-size: 30px;
         color: rgb(167, 163, 163);
     }
-
-    
 }
