@@ -1,5 +1,23 @@
+import User from "../models/User";
+
+export const loginController = (req, res) => {
+    const loginFlog = req.userLoginFlag || false;
+
+    let isAuthenticated = false;
+
+    if (loginFlog) {
+        isAuthenticated = true;
+    }
+
+    if (isAuthenticated) {
+        homeController(req, res);
+    } else {
+        res.render("screens/login");
+    }
+};
+
 export const homeController = (req, res) => {
-    res.render("screens/home")
+    res.render("screens/home");
 };
 
 export const searchController = (req, res) => {
@@ -14,22 +32,6 @@ export const likeController = (req, res) => {
     res.render("screens/like")
 };
 
-export const loginController = (req, res) => {
-    const loginFlog = req.userLoginFlag || false;
-
-    let isAuthenticated = false;
-
-    if (loginFlog) {
-        isAuthenticated = true;
-    }
-
-    if (isAuthenticated) {
-        loginController(req, res);
-    } else {
-        res.render("screens/login");
-    }
-};
-
 export const signinController = async (req, res) => {
     const sess = req.session;
 
@@ -42,9 +44,10 @@ export const signinController = async (req, res) => {
 
     try {
         const result = await User.find();
+
         Promise.all(
             result.map(user => {
-                if (user.userId === input_id && user.userPassword == input_pass) {
+                if (user.userId === input_id && user.userPassword === input_pass) {
                     loginFlag = true;
 
                     sess.userId = user._id;
@@ -52,6 +55,7 @@ export const signinController = async (req, res) => {
             })
         );
         req.userLoginFlag = loginFlag;
+        console.log("[SYSTEM] 사용자가 로그인을 하였습니다.")
         loginController(req, res);
     } catch (e) {
         console.log("[SYSTEM] 사용자가 로그인을 시도하였지만 에러가 발생했습니다.")
@@ -59,3 +63,10 @@ export const signinController = async (req, res) => {
     }
 };
 
+export const profileController = (req, res) => {
+    res.render("screens/profile")
+};
+
+export const signupController = (req, res) => {
+    res.render("screens/signup")
+};

@@ -1,8 +1,8 @@
-@import "./reset.css";
-@import "../css/layouts/main.css";
-@import "../css/screens/home.css";
-@import "../css/screens/like.css";
-@import "../css/screens/image.css";
+@import "../reset.css";
+@import "../screens/home.css";
+@import "../screens/like.css";
+@import "../screens/image.css";
+@import "../screens/profile.css";
 
 @media screen and (min-width: 450px) {
     .mobile__screen {
