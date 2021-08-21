@@ -1,5 +1,5 @@
-@import "../screens/search.css";
 @import "../reset.css";
+@import "../screens/search.css";
 
 .searchheader {
     width: 100%;

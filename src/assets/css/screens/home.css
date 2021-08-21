@@ -858,6 +858,11 @@
     margin-top: 50px;
     width: 100%;
     height: 200px;
+}
+
+.box__Last__l {
+    width: 100%;
+    height: 200px;
 
     display: flex;
     flex-direction: row;
@@ -868,18 +873,18 @@
     background-position: center center;
 }
 
-.box__Last__col1 {
+.box__Last__l__col1 {
     width: 70%;
     height: 200px;
 }
 
-.box__Last__col2 {
+.box__Last__l__col2 {
     width: 30%;
     height: 200px;
     margin-top: 30px;
 }
 
-.box__Last__col2 img {
+.box__Last__l__col2 img {
     width: 100%;
     height: 85%;
 
