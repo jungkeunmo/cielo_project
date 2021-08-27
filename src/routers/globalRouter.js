@@ -7,7 +7,11 @@ import {
     likeController,
     signinController,
     profileController,
-    signupController
+    signupController,
+    settingsController,
+    signupPostController,
+    changepassController,
+    changepassPostController
 } from "../controllers/globalContollr";
 
 const globalRouter = express.Router();
@@ -19,7 +23,11 @@ globalRouter.get("/image", imageController);
 globalRouter.get("/like", likeController);
 globalRouter.get("/profile", profileController);
 globalRouter.get("/signup", signupController);
+globalRouter.get("/settings", settingsController);
+globalRouter.get("/changepass", changepassController);
 
 globalRouter.post("/signin", signinController);
+globalRouter.post("/signupPost", signupPostController);
+globalRouter.post("/changepassPost", changepassPostController);
 
 export default globalRouter;

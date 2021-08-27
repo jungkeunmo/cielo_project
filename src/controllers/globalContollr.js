@@ -70,3 +70,33 @@ export const profileController = (req, res) => {
 export const signupController = (req, res) => {
     res.render("screens/signup")
 };
+
+export const signupPostController = async (req, res) => {
+    const {
+        body: { input_id, input_pass },
+    } = req
+
+    try {
+        const result = await User.create({
+            userId: input_id,
+            userPassword: input_pass,
+        });
+
+        loginController(req, res);
+    } catch (e) {
+        console.log(e);
+        signupController(req, res);
+    }
+};
+
+export const settingsController = (req, res) => {
+    res.render("screens/settings")
+};
+
+export const changepassController = (req, res) => {
+    res.render("screens/changepass")
+};
+
+export const changepassPostController = (req, res) => {
+
+};

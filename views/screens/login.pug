@@ -4,10 +4,16 @@ block content
     div.mainBox 
         h1.logo CIELO
         form(action="/signin" method="post")
-            div.loginLabel
+            div.loginLabel1
                 input(type="text" name="input_id" placeholder="아이디")
-            div.loginLabel
+            div.loginLabel2
                 input(type="password" name="input_pass" placeholder="비밀번호")
-            input(type="submit" value="LOGIN")  
-            a(href="/signup") 
-                .signup 회원가입
+            div.login
+                input(type="submit" value="LOGIN")  
+            div.ChangePassword
+                a(href="/changepass") 
+                    .ChangePassword__pass 비밀번호 변경
+            h2.msg 또는            
+            div.signup
+                a(href="/signup") 
+                    .signup__sp 회원가입

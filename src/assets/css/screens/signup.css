@@ -1,0 +1,153 @@
+.signupmainBox {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.signuplogo {
+    width: 100%;
+    height: 53px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.signuplogo__icon {
+    padding: 5px;
+
+    width: 8%;
+    height: 53px;
+
+    font-size: 30px;
+}
+
+.signuplogo__h {
+    width: 100%;
+    height: 53px;
+
+    font-size: 16px;
+
+    padding: 15px 125px;
+
+    color: royalblue;
+}
+
+.signupmsg {
+    padding: 10px;
+
+    width: 160px;
+    height: 50px;
+
+    font-size: 22px;
+
+    margin: 15px 0px 30px;
+}
+
+.signupmainBox form {
+    width: 100%;
+    height: 200px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 45px;
+}
+
+.signuph {
+    font-size: 20px;
+    color: rgb(167, 167, 167);
+
+    margin-top: 10px;
+}
+
+.signuploginLabel1 {
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.signuploginLabel2 {
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.signuploginLabel1 input {
+    outline: none;
+    background: none;
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+
+    padding: 10px;
+
+    transition: 0.5s;
+}
+
+.signuploginLabel2 input {
+    outline: none;
+    background: none;
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+
+    padding: 10px;
+
+    transition: 0.5s;
+}
+
+.signuploginLabel1 input:hover {
+    box-shadow: 0.5px 0.5px 1px #444;
+}
+
+.signuploginLabel2 input:hover {
+    box-shadow: 0.5px 0.5px 1px #444;
+}
+
+.signuph3 {
+    margin-top: 75px;
+
+    font-size: 11px;
+    color: #999;
+}
+
+.signupbutton {
+    margin-top: 5px;
+
+    width: 100%;
+    height: 100px;
+
+    padding: 5px;
+}
+
+.signupmainBox form input[type=submit] {
+    outline: none;
+    border: none;
+    background: none;
+
+    width: 100%;
+    height: 50px;
+
+    color: #fff;
+    background-color: royalblue;
+
+   
+}

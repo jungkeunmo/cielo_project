@@ -162,17 +162,16 @@
 
 
 
-.box__col4__sec1__b1__k__text__icon img,
-.box__col4__sec1__b2__k__text__icon img,
-.box__col4__sec2__b1__l__text__icon img,
-.box__col4__sec2__b2__l__text__icon img {
+.box__col4__sec1__b1__k__text__icon i,
+.box__col4__sec1__b2__k__text__icon i,
+.box__col4__sec2__b1__l__text__icon i,
+.box__col4__sec2__b2__l__text__icon i {
     width: 100%;
-    height: 50%;
-    
-    image-rendering: url("img/homeicon.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    height: 100%;
+
+    font-size: 12px;
+    padding: 4px 5px 0px;
+    color: #999;
 }
                             
 
