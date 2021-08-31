@@ -1,3 +1,15 @@
 extends ../layouts/profilemain.pug
 
 block content
+
+    div.profile
+        .profile__header
+        .profile__like  
+            form(action="/imagecreate" method="GET")
+                i.fas.fa-th
+                input(type="submit" value="게시") 
+            form(action="/like" method="GET")
+                i.far.fa-heart
+                input(type="submit" value="찜") 
+
+    div.profilefooter

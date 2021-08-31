@@ -1,0 +1,27 @@
+extends ../layouts/serve.pug
+
+block content
+     form.writeForm(action="/editBoard" method="POST")
+        div.writeWrapper
+            div.writeWrapper__guide IMG
+            div.writeWrapper__content 
+                input(type="text" name="img" value=I.img)
+        div.writeWrapper
+            div.writeWrapper__guide TITLE
+            div.writeWrapper__content 
+                input(type="text" name="title" value=I.title)
+        div.writeWrapper        
+            div.writeWrapper__guide AUTHOR
+            div.writeWrapper__content 
+                input(type="text" name="author" value=I.author) 
+        div.descwriteWrapper
+            div.descwriteWrapper__guide DESC
+            div.descwriteWrapper__content
+                textarea(name="desc")=I.description
+
+        div.buttonArea
+            input(type="hidden" name="id" value=I._id)
+            input(type="submit" value="EDIT") 
+
+    form.listForm(action="/image" method="GET")
+        input(type="submit" value="LIST")             

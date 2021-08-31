@@ -1,0 +1,15 @@
+.image {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+
+    background-size: cover;
+    border-radius: 8px;
+}

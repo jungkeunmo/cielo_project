@@ -48,15 +48,28 @@
         box-shadow: 0.5px 0.5px 3px rgb(214, 213, 213);
     }
 
-    .header__icon {
-        width: 100%;
-        height: 30px;
-        padding: 2px;
-        margin-left: 180px;
+    .header__icon1 {
+        width: 50%;
+        height: 53px;
+
+        padding: 15px 10px;
     }
 
-    .header__icon i {
+    .header__icon1 i {
+        font-size: 20px;
+        color: #333;
+    }
+
+    .header__icon2 {
+        width: 50%;
+        height: 53px;
+
+        padding: 13px 10px 13px 125px;
+    }
+
+    .header__icon2 i {
         font-size: 28px;
+        color: #333;
     }
 
     .main {

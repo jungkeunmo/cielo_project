@@ -1,0 +1,30 @@
+extends ../layouts/serve.pug
+
+block content
+    form.writeForm(action="#" method="POST")
+        div.writeWrapper
+            div.writeWrapper__guide IMG
+            div.writeWrapper__content 
+                input(type="text" name="img" value=I.img readonly)
+        div.writeWrapper
+            div.writeWrapper__guide TITLE
+            div.writeWrapper__content 
+                input(type="text" name="title" value=I.title readonly)
+        div.writeWrapper        
+            div.writeWrapper__guide AUTHOR
+            div.writeWrapper__content 
+                input(type="text" name="author" value=I.author readonly) 
+        div.descwriteWrapper
+            div.descwriteWrapper__guide DESC
+            div.descwriteWrapper__content
+                textarea(name="desc" readonly)=I.description 
+
+    form.listForm(action="/image" method="GET")
+        input(type="submit" value="LIST")   
+    if dev 
+        form.deleteForm(action="/deleteBoard", method="POST")
+            input(type="hidden" name="id" value=I._id)
+            input(type="submit" value="Delete")     
+        form.updateForm(action="/edit", method="GET")
+            input(type="hidden" name="id" value=I._id)
+            input(type="submit" value="Edit Page")             

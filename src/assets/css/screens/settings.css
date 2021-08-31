@@ -1,10 +1,79 @@
 .settingsBox {
-    background-color: aquamarine;
     width: 100%;
-    height: 50px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.settingsBox__col {
+.settingsBox__header {
+    width: 100%;
+    height: 53px;
+
+    display: flex;
+    flex-direction: row;
+
+    box-shadow: 0.5px 0.5px 0.5px #999;
+}
+
+.settingsBox__header__sec1 {
+    width: 30px;
+    height: 30px;
+}
+
+.settingsBox__header__sec1__icon {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.settingsBox__header__sec1__icon i {
+    font-size: 30px;
+}
+
+.settingsBox__header__sec2 {
+    width: 100%;
+    height: 53px;
+    
+    padding: 20px 140px;
+}
+
+.settingsBox__header__sec2__p {
     font-size: 17px;
-    color: red;
+}
+
+.settingsBox__main {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsBox__main__l {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsBox__main__l__out {
+    color: rgb(177, 54, 54);
+}
+
+.settingsBox__main__e {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsBox__main__e__col {
+    color: #222;
 }

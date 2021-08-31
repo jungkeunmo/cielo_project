@@ -1,4 +1,7 @@
 import User from "../models/User";
+import Image from "../models/Image";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const loginController = (req, res) => {
     const loginFlog = req.userLoginFlag || false;
@@ -24,8 +27,12 @@ export const searchController = (req, res) => {
     res.render("screens/search")
 };
 
-export const imageController = (req, res) => {
-    res.render("screens/image")
+export const imageController = async (req, res) => {
+    const ImageList = await Image.find({}, {});
+
+    console.log(ImageList);
+
+    res.render("screens/image", { ImageList });
 };
 
 export const likeController = (req, res) => {
@@ -98,5 +105,114 @@ export const changepassController = (req, res) => {
 };
 
 export const changepassPostController = (req, res) => {
+    res.render("screens/changepassPost")
+};
+
+export const imagecreateController = (req, res) => {
+    res.render("screens/imagecreate")
+};
+
+export const imagePostController = async (req, res) => {
+    const {
+        body: { img, title, author, desc },
+    } = req
+
+    try {
+        const D = new Date();
+        let year = D.getFullYear();
+        let month = D.getMonth() + 1;
+        let date = D.getDate();
+
+        month = month < 10 ? `0${month}` : month;
+        date = date < 10 ? `0${date}` : date;
+
+        const resultDate = `${year}-${month}-${date}`;
+
+        const result = await Image.create({
+            img: img,
+            title: title,
+            description: desc,
+            author: author,
+            created: resultDate,
+        });
+
+        imageController(req, res);
+    } catch (e) {
+        console.log(e);
+        profileController(req, res);
+    }
+};
+
+export const editController = async (req, res) => {
+    const {
+        query: { id },
+    } = req;
+
+    try {
+        const result = await Image.findOne({ _id: id });
+
+        res.render("screens/edit", { I: result });
+    } catch (e) {
+        console.log(e);
+        homeController(req, res);
+    }
+};
+
+
+export const detailController = async (req, res) => {
+    const {
+        query: { id },
+    } = req;
+
+    const mode = process.env.NODE_ENV;
+
+    let IS_DEV = false;
+
+    if (mode === "develop") IS_DEV = true;
+
+
+    try {
+        const result = await Image.findOne({ _id: id });
+
+        res.render("screens/detail", { I: result, dev: IS_DEV });
+    } catch (e) {
+        console.log(e);
+        homeController(req, res);
+    }
+};
+
+export const deleteBoardController = async (req, res) => {
+    const {
+        body: { id },
+    } = req;
+
+    try {
+        const result = await Image.deleteOne({ _id: id });
+        imageController(req, res);
+    } catch (e) {
+        console.log(e);
+        homeController(req, res);
+    }
+};
+
+export const editBoardController = async (req, res) => {
+    const {
+        body: { id, img, title, desc, author },
+    } = req;
+
+    try {
+        const result = await Image.updateOne({ _id: id }, {
+            $set: {
+                img: img,
+                title: title,
+                description: desc,
+                author: author,
+            },
+        });
+        ImageController(req, res);
+    } catch (e) {
+        console.log(e);
+        ImageController(req, res);
+    }
 
 };

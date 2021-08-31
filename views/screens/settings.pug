@@ -2,5 +2,18 @@ extends ../layouts/serve.pug
 
 block content 
     .settingsBox
-        a(href="/")
-            .settingsBox__col 로그아웃
+        .settingsBox__header
+            .settingsBox__header__sec1
+                .settingsBox__header__sec1__icon
+                    a(href="/profile")
+                        i.fas.fa-chevron-left
+            .settingsBox__header__sec2
+                p.settingsBox__header__sec2__p 설정
+        .settingsBox__main
+            .settingsBox__main__l
+                a(href="/")
+                    .settingsBox__main__l__out 로그아웃
+            .settingsBox__main__e 
+                a(href="#")
+                    .settingsBox__main__e__col 이용약관       
+

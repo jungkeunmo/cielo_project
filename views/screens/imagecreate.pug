@@ -1,0 +1,25 @@
+extends ../layouts/serve.pug
+
+block content 
+    form.imageForm(action="/imagePost" method="POST")
+        div.imageWrapper
+            div.imageWrapper__guide img
+            div.imageWrapper__content 
+                input(type="text" name="img")
+        div.imageWrapper
+            div.imageWrapper__guide 제목
+            div.imageWrapper__content 
+                input(type="text" name="title")
+        div.imageWrapper        
+            div.imageWrapper__guide 글쓴이
+            div.imageWrapper__content 
+                input(type="text" name="author") 
+        div.descwriteWrapper
+            div.descwriteWrapper__guide 내용
+            div.descwriteWrapper__content
+                textarea(name="desc")
+        div.buttonArea
+            input(type="submit" value="WRITE")
+                     
+    form.listForm(action="/" method="GET")
+        input(type="submit" value="LIST")            

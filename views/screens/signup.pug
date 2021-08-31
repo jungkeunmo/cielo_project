@@ -7,14 +7,13 @@ block content
                 .signuplogo__icon
                     i.fas.fa-chevron-left
             h1.signuplogo__h 회원가입
-        div.signupmsg 만드실 아이디와 비번 작성
         form(action="/signupPost" method="post")
             h2.signuph 아이디 입력
             div.signuploginLabel1
-                input(type="text" name="input_id" placeholder="아이디 작성.....")
+                input(type="text" name="input_id" placeholder="가입 하실 아이디 작성.....")
             h2.signuph 비밀번호 입력
             div.signuploginLabel2
-                input(type="password" name="input_pass" placeholder="비밀번호 작성....")
+                input(type="password" name="input_pass" placeholder="가입 하실 비밀번호 작성....")
             h3.signuph3 마지막 단계 입니다!
             div.signupbutton
                 input(type="submit" value="가입하기") 

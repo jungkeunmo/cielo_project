@@ -49,15 +49,29 @@
         box-shadow:  0.7px 1px rgb(214, 213, 213);
     }
 
-
-    .header__icon {
-        width: 100%;
+    .header__icon1 {
+        width: 50%;
         height: 30px;
-        padding: 2px;
-        margin-left: 180px;
+
+        margin-top: 5px;
+        padding: 0px 10px;
     }
 
-    .header__icon i {
+    .header__icon1 i {
+        font-size: 20px;
+        color: #333;
+    }
+
+    .header__icon2 {
+        width: 50%;
+        height: 30px;
+
+        margin-top: 3px;
+        padding: 0px 10px 0px 125px;
+    }
+
+    .header__icon2 i {
+        color: #333;
         font-size: 28px;
     }
 
