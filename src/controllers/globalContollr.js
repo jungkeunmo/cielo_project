@@ -154,7 +154,7 @@ export const editController = async (req, res) => {
         res.render("screens/edit", { I: result });
     } catch (e) {
         console.log(e);
-        homeController(req, res);
+        imageController(req, res);
     }
 };
 
@@ -209,10 +209,10 @@ export const editBoardController = async (req, res) => {
                 author: author,
             },
         });
-        ImageController(req, res);
+        imageController(req, res);
     } catch (e) {
         console.log(e);
-        ImageController(req, res);
+        imageController(req, res);
     }
 
 };

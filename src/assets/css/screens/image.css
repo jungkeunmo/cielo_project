@@ -6,10 +6,15 @@
 }
 
 .img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
 
     background-size: cover;
     border-radius: 8px;
+}
+
+.image form input {
+    height: 40px;
+    background-color:#fff;
 }
