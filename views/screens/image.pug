@@ -4,7 +4,7 @@ block content
     section.image
         each I in ImageList
             form(action="/detail" method="GET")
-                    input(type="hidden" name="id" value=I._id)
-                    input(type="submit" value=I.title) 
-            div.img(style="background-image: url("+ I.img +"); background-size: cover;")
+                div.img(style="background-image: url("+ I.img +"); background-size: cover;")
+                input(type="hidden" name="id" value=I._id)
+                input(type="submit" value=I.title)   
         

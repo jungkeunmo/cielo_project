@@ -173,8 +173,9 @@ export const detailController = async (req, res) => {
 
     try {
         const result = await Image.findOne({ _id: id });
+        const detailList = await Image.find({}, {});
 
-        res.render("screens/detail", { I: result, dev: IS_DEV });
+        res.render("screens/detail", { I: result, dev: IS_DEV, detailList });
     } catch (e) {
         console.log(e);
         homeController(req, res);

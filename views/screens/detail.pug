@@ -1,6 +1,8 @@
 extends ../layouts/serve.pug
 
 block content
+    each data in detailList
+        div.img(style="background-image: url("+ data.img +"); background-size: cover;")
     form.writeForm(action="#" method="POST")
         div.writeWrapper
             div.writeWrapper__guide IMG

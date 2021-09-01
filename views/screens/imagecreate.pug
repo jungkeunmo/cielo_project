@@ -3,15 +3,15 @@ extends ../layouts/serve.pug
 block content 
     form.imageForm(action="/imagePost" method="POST")
         div.imageWrapper
-            div.imageWrapper__guide img
+            div.imageWrapper__guide 이미지 입력
             div.imageWrapper__content 
-                input(type="text" name="img")
+                input(type="text" name="img" placeholder="이미지 주소 링크를 써주세요.")
         div.imageWrapper
             div.imageWrapper__guide 제목
             div.imageWrapper__content 
                 input(type="text" name="title")
         div.imageWrapper        
-            div.imageWrapper__guide 글쓴이
+            div.imageWrapper__guide 글쓴이 
             div.imageWrapper__content 
                 input(type="text" name="author") 
         div.descwriteWrapper
@@ -19,7 +19,6 @@ block content
             div.descwriteWrapper__content
                 textarea(name="desc")
         div.buttonArea
-            input(type="submit" value="WRITE")
-                     
-    form.listForm(action="/" method="GET")
-        input(type="submit" value="LIST")            
+            input(type="submit" value="게시하기")       
+        form.listForm(action="/" method="GET")
+            input(type="submit" value="뒤로가기")            

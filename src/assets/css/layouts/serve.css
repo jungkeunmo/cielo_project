@@ -3,6 +3,7 @@
 @import "../screens/signup.css";
 @import "../screens/settings.css";
 @import "../screens/changepass.css";
+@import "../screens/imagecreate.css";
 
 @media screen and (min-width: 450px) {
     .mobile__screen {
