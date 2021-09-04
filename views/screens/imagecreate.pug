@@ -1,6 +1,7 @@
-extends ../layouts/serve.pug
+extends ../layouts/base.pug
 
 block content 
+    .imagecr
     form.imageForm(action="/imagePost" method="POST")
         div.imageWrapper
             div.imageWrapper__guide 이미지 입력
@@ -9,16 +10,17 @@ block content
         div.imageWrapper
             div.imageWrapper__guide 제목
             div.imageWrapper__content 
-                input(type="text" name="title")
+                input(type="text" name="title" placeholder="제목을 써주세요.")
         div.imageWrapper        
             div.imageWrapper__guide 글쓴이 
             div.imageWrapper__content 
-                input(type="text" name="author") 
+                input(type="text" name="author" placeholder="글쓴이를 써주세요.") 
         div.descwriteWrapper
             div.descwriteWrapper__guide 내용
             div.descwriteWrapper__content
                 textarea(name="desc")
         div.buttonArea
-            input(type="submit" value="게시하기")       
-        form.listForm(action="/" method="GET")
-            input(type="submit" value="뒤로가기")            
+            input(type="submit" value="게시하기")
+                   
+    form.listForm(action="/" method="GET")
+        input(type="submit" value="뒤로가기")            

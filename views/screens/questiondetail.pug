@@ -1,0 +1,26 @@
+extends ../layouts/base.pug
+
+block content
+    form.writeForm(action="#" method="POST")
+        div.writeWrapper
+            div.writeWrapper__guide TITLE
+            div.writeWrapper__content 
+                input(type="text" name="title" value=data.title readonly)
+        div.writeWrapper        
+            div.writeWrapper__guide AUTHOR
+            div.writeWrapper__content 
+                input(type="text" name="author" value=data.author readonly) 
+        div.descwriteWrapper
+            div.descwriteWrapper__guide DESC
+            div.descwriteWrapper__content
+                textarea(name="desc" readonly)=data.description 
+
+    form.listForm(action="/question" method="GET")
+        input(type="submit" value="돌아가기")   
+    if dev 
+        form.deleteForm(action="/questiondeletepost", method="POST")
+            input(type="hidden" name="id" value=data._id)
+            input(type="submit" value="삭제")     
+        form.updateForm(action="/questionedit", method="GET")
+            input(type="hidden" name="id" value=data._id)
+            input(type="submit" value="수정하기")         

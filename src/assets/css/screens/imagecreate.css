@@ -1,12 +1,68 @@
+.imagecr {
+    width: 100%;
+    height: 200px;
+    background-image: url("https://i.pinimg.com/474x/da/86/6f/da866fbaf74ffb131e485ea332e5eff3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .imageForm {
     width: 100%;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
-    padding: 10px;
+
+    padding: 10px;  
 }
-input{
+
+.imageWrapper__guide {
     width: 200px;
-    height: 40px;
+    height: 20px;
+
+    margin: 5px 0px 5px;
+}
+
+.imageWrapper input {
+    width: 200px;
+    height: 30px;
+    
+    padding-left: 3px;
+    border-radius: 8px;
+}
+
+.descwriteWrapper__guide {
+    margin-top: 5px;
+}
+
+.descwriteWrapper__content textarea {
+    margin: 10px 0px 10px;
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 280px;
+}
+
+.buttonArea input {
+    width: 65px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: #fff;
+}
+
+.listForm {
+    width: 65px;
+    height: 35px;
+
+    padding: 0px 10px 0px;
+    margin: 10px 0px 100px;  
+}
+
+.listForm input {
+    width: 65px;
+    height: 35px;
+   
+
+    border-radius: 5px;
 }

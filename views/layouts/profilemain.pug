@@ -24,6 +24,12 @@ html(lang="en")
                     .header__icon2__col   
                         a(href="/settings")
                             i.fas.fa-cog 
+
+            header.searchheader
+                form.searchheader__col1(method="get" action="https://www.pinterest.co.kr/search/") 
+                    i.fas.fa-search
+                    input.baseinput(type="text" name="base" placeholder="검색")
+                    
             main.main 
                 block content
 

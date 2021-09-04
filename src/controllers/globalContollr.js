@@ -1,7 +1,10 @@
 import User from "../models/User";
 import Image from "../models/Image";
+import Board from "../models/Board";
 import dotenv from "dotenv";
 dotenv.config();
+
+//login
 
 export const loginController = (req, res) => {
     const loginFlog = req.userLoginFlag || false;
@@ -108,6 +111,10 @@ export const changepassPostController = (req, res) => {
     res.render("screens/changepassPost")
 };
 
+//###############################################################
+
+//image page
+
 export const imagecreateController = (req, res) => {
     res.render("screens/imagecreate")
 };
@@ -173,9 +180,8 @@ export const detailController = async (req, res) => {
 
     try {
         const result = await Image.findOne({ _id: id });
-        const detailList = await Image.find({}, {});
 
-        res.render("screens/detail", { I: result, dev: IS_DEV, detailList });
+        res.render("screens/detail", { I: result, dev: IS_DEV });
     } catch (e) {
         console.log(e);
         homeController(req, res);
@@ -216,4 +222,140 @@ export const editBoardController = async (req, res) => {
         imageController(req, res);
     }
 
+};
+
+//###############################################################
+
+//question 
+
+export const questionController = async (req, res) => {
+    try {
+        const result = await Board.find().sort({ created: -1 });
+
+        res.render("screens/question", { boardList: result });
+    } catch (e) {
+        console.log(e);
+        res.render("screens/question", { boardList: [] });
+    }
+};
+
+export const questiondetailController = async (req, res) => {
+    const {
+        query: { id },
+    } = req;
+
+    const mode = process.env.NODE_ENV;
+
+    let IS_DEV = false;
+
+    if (mode === "develop") IS_DEV = true;
+
+
+    try {
+        const result = await Board.findOne({ _id: id });
+
+        res.render("screens/questiondetail", { data: result, dev: IS_DEV });
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
+};
+
+export const questioncreateController = (req, res) => {
+    res.render("screens/questioncreate")
+};
+
+export const questioncreatepostController = async (req, res) => {
+    const {
+        body: { title, author, desc },
+    } = req
+
+    try {
+        const D = new Date();
+        let year = D.getFullYear();
+        let month = D.getMonth() + 1;
+        let date = D.getDate();
+
+        month = month < 10 ? `0${month}` : month;
+        date = date < 10 ? `0${date}` : date;
+
+        const resultDate = `${year}-${month}-${date}`;
+
+        const result = await Board.create({
+            title: title,
+            description: desc,
+            author: author,
+            created: resultDate,
+        });
+
+        questionController(req, res);
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
+};
+
+export const questiondeletepostController = async (req, res) => {
+    const {
+        body: { id },
+    } = req;
+
+    try {
+        const result = await Board.deleteOne({ _id: id });
+        questionController(req, res);
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
+
+};
+
+export const questiondeletpostController = async (req, res) => {
+    const {
+        body: { id },
+    } = req;
+
+    try {
+        const result = await Board.deleteOne({ _id: id });
+        questionController(req, res);
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
+
+};
+
+export const questioneditController = async (req, res) => {
+    const {
+        query: { id },
+    } = req;
+
+    try {
+        const result = await Board.findOne({ _id: id });
+
+        res.render("screens/questionedit", { data: result });
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
+};
+
+export const questioneditpostController = async (req, res) => {
+    const {
+        body: { id, title, desc, author },
+    } = req;
+
+    try {
+        const result = await Board.updateOne({ _id: id }, {
+            $set: {
+                title: title,
+                description: desc,
+                author: author,
+            },
+        });
+        questionController(req, res);
+    } catch (e) {
+        console.log(e);
+        questionController(req, res);
+    }
 };

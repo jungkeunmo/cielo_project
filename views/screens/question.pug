@@ -1,0 +1,22 @@
+extends ../layouts/base.pug
+
+block content
+    h1.qutext 문의사항 게시판
+    div.question
+        div.question__button
+            form(action="/questioncreate" method="GET")
+                input(type="submit" value="게시하기") 
+        ul.question__dataList
+            li 번호
+            li 제목
+            li 작성자
+            li 작성일
+        each data in boardList    
+            ul.question__list
+                li 1
+                li 
+                    form(action="/questiondetail" method="GET")
+                        input(type="hidden" name="id" value=data._id)
+                        input(type="submit" value=data.title) 
+                li #{data.author}
+                li #{data.created}

@@ -13,10 +13,11 @@ html(lang="en")
     body
         section.pc__screen 
         section.mobile__screen
+
         header.searchheader
-            .searchheader__col1
+            form.searchheader__col1(method="get" action="https://www.pinterest.co.kr/search/") 
                 i.fas.fa-search
-                input(type="text" placeholder="검색")
+                input.baseinput(type="text" name="base" placeholder="검색")
 
         main.searchmain     
             block content
