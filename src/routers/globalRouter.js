@@ -24,7 +24,8 @@ import {
     questioncreatepostController,
     questiondeletpostController,
     questioneditpostController,
-    questioneditController
+    questioneditController,
+    termsofuseController
 } from "../controllers/globalContollr";
 
 const globalRouter = express.Router();
@@ -52,6 +53,9 @@ globalRouter.get("/question", questionController);
 globalRouter.get("/questiondetail", questiondetailController);
 globalRouter.get("/questioncreate", questioncreateController);
 globalRouter.get("/questionedit", questioneditController);
+
+//termsofuse
+globalRouter.get("/termsofuse", termsofuseController);
 
 //login post
 globalRouter.post("/signin", signinController);

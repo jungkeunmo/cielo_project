@@ -1,21 +1,22 @@
 extends ../layouts/base.pug
 
 block content
+    h1.qucreate 문의사항 게시하기
     form.writeForm(action="/questioncreatepost" method="POST")
         div.writeWrapper
-            div.writeWrapper__guide TITLE
+            div.questioncr__guide TITLE
             div.writeWrapper__content 
                 input(type="text" name="title")
         div.writeWrapper        
-            div.writeWrapper__guide AUTHOR
+            div.questioncr__guide AUTHOR
             div.writeWrapper__content 
                 input(type="text" name="author") 
         div.descwriteWrapper
-            div.descwriteWrapper__guide DESC
+            div.questioncr__guide DESC
             div.descwriteWrapper__content
                 textarea(name="desc")
         div.buttonArea
             input(type="submit" value="게시하기")
                      
-    form.listForm(action="/" method="GET")
+    form.listForm(action="/question" method="GET")
         input(type="submit" value="돌아가기")             

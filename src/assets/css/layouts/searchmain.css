@@ -4,6 +4,8 @@
 @import "../screens/edit.css";
 @import "../screens/imagecreate.css";
 @import "../screens/question.css";
+@import "../screens/questioncreate.css";
+@import "../screens/termsofuse.css";
 
 .searchheader {
     width: 100%;

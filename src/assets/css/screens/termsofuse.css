@@ -1,0 +1,17 @@
+.ter {
+    width: 100%;
+    padding: 10px;
+
+    margin-bottom: 150px;
+}
+
+.ter__ja1,
+.ter__ja1n,
+.ter__ja2,
+.ter__ja2n,
+.ter__ja3,
+.ter__ja3n,
+.ter__ja4,
+.ter__ja4n  {
+    margin-top: 10px;
+}

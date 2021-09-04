@@ -359,3 +359,11 @@ export const questioneditpostController = async (req, res) => {
         questionController(req, res);
     }
 };
+
+//###############################################################
+
+//termsofuse
+
+export const termsofuseController = (req, res) => {
+    res.render("screens/termsofuse")
+};
